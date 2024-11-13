@@ -681,6 +681,7 @@ func interfaceEncoder(e *encodeState, v reflect.Value, opts encOpts) {
 }
 
 func unsupportedTypeEncoder(e *encodeState, v reflect.Value, _ encOpts) {
+	e.WriteString("null")
 }
 
 type structEncoder struct {
